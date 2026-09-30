@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>가브리엘라의 이탈리아 건축방문기 ('27년 1/12 - 1/20)</title>
-  <!-- Google Fonts & Font Awesome Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Noto+Serif+KR:wght@300;400;600;700&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가브리엘라의 이탈리아 건축방문기 ('27년 1/12 - 1/20)</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Noto+Serif+KR:wght@300;400;600;700&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
     :root {
       --terracotta: #A8422B;
       --terracotta-dark: #7E2F1E;
@@ -24,13 +23,7 @@
       --shadow: 0 10px 30px rgba(35, 34, 32, 0.08);
       --radius: 14px;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Pretendard', sans-serif;
       background-color: var(--marble);
@@ -38,26 +31,11 @@
       line-height: 1.65;
       overflow-x: hidden;
     }
-
-    h1, h2, h3, .font-serif {
-      font-family: 'Noto Serif KR', serif;
-    }
-
-    .font-eng {
-      font-family: 'Cinzel', serif;
-      letter-spacing: 0.06em;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Header & Navigation */
+    h1, h2, h3, .font-serif { font-family: 'Noto Serif KR', serif; }
+    .font-eng { font-family: 'Cinzel', serif; letter-spacing: 0.06em; }
+    a { text-decoration: none; color: inherit; }
     header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       background: rgba(248, 246, 240, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
@@ -66,42 +44,17 @@
       justify-content: space-between;
       align-items: center;
     }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-    }
-
+    .brand { display: flex; flex-direction: column; }
     .brand-title {
       font-family: 'Cinzel', serif;
       font-size: 1.15rem;
       font-weight: 700;
       color: var(--terracotta);
     }
-
-    .brand-sub {
-      font-size: 0.78rem;
-      color: var(--muted);
-      letter-spacing: 0.02em;
-    }
-
-    nav {
-      display: flex;
-      gap: 1.2rem;
-      align-items: center;
-    }
-
-    nav a {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--charcoal);
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--terracotta);
-    }
-
+    .brand-sub { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.02em; }
+    nav { display: flex; gap: 1.2rem; align-items: center; }
+    nav a { font-size: 0.9rem; font-weight: 500; color: var(--charcoal); transition: color 0.2s; }
+    nav a:hover { color: var(--terracotta); }
     .btn-status-toggle {
       background: var(--terracotta);
       color: #fff;
@@ -116,13 +69,7 @@
       gap: 0.4rem;
       transition: background 0.2s, transform 0.1s;
     }
-
-    .btn-status-toggle:hover {
-      background: var(--terracotta-dark);
-      transform: translateY(-1px);
-    }
-
-    /* Hero Section */
+    .btn-status-toggle:hover { background: var(--terracotta-dark); transform: translateY(-1px); }
     .hero {
       position: relative;
       height: 72vh;
@@ -134,20 +81,8 @@
       color: #fff;
       background: url('https://around-trip.com/uploads/trvhero_c774d0c8b9acc54420ac74cd95cea0d504_5e61e70a.jpg') center/cover no-repeat;
     }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(35,34,32,0.45) 0%, rgba(35,34,32,0.85) 100%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 900px;
-      padding: 2rem;
-    }
-
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(35,34,32,0.45) 0%, rgba(35,34,32,0.85) 100%); }
+    .hero-content { position: relative; z-index: 2; max-width: 900px; padding: 2rem; }
     .hero-tag {
       display: inline-block;
       font-family: 'Cinzel', serif;
@@ -160,7 +95,6 @@
       margin-bottom: 1.2rem;
       backdrop-filter: blur(4px);
     }
-
     .hero-title {
       font-size: 2.8rem;
       font-weight: 700;
@@ -168,7 +102,6 @@
       margin-bottom: 1rem;
       text-shadow: 0 4px 15px rgba(0,0,0,0.4);
     }
-
     .hero-desc {
       font-size: 1.15rem;
       color: rgba(255,255,255,0.9);
@@ -177,14 +110,7 @@
       margin-left: auto;
       margin-right: auto;
     }
-
-    .hero-meta {
-      display: flex;
-      justify-content: center;
-      gap: 1.8rem;
-      flex-wrap: wrap;
-    }
-
+    .hero-meta { display: flex; justify-content: center; gap: 1.8rem; flex-wrap: wrap; }
     .meta-badge {
       background: rgba(255,255,255,0.12);
       padding: 0.6rem 1.2rem;
@@ -193,15 +119,12 @@
       font-size: 0.88rem;
       border: 1px solid rgba(255,255,255,0.2);
     }
-
-    /* Live Status Tracker Bar */
     .status-tracker {
       background: var(--charcoal);
       color: #fff;
       padding: 1.2rem 1.8rem;
       box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
-
     .tracker-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -211,13 +134,7 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-
-    .tracker-current {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
+    .tracker-current { display: flex; align-items: center; gap: 1rem; }
     .live-pulse {
       width: 12px;
       height: 12px;
@@ -226,24 +143,13 @@
       box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
       animation: pulse 1.8s infinite;
     }
-
     @keyframes pulse {
       0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
       70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
       100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
     }
-
-    .status-text h4 {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--gold-light);
-    }
-
-    .status-text p {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.75);
-    }
-
+    .status-text h4 { font-size: 1.05rem; font-weight: 600; color: var(--gold-light); }
+    .status-text p { font-size: 0.85rem; color: rgba(255,255,255,0.75); }
     .countdown-box {
       background: rgba(255,255,255,0.08);
       padding: 0.6rem 1.4rem;
@@ -251,42 +157,12 @@
       border: 1px solid rgba(255,255,255,0.15);
       font-size: 0.88rem;
     }
-
-    .countdown-box strong {
-      color: var(--gold-light);
-      font-size: 1.1rem;
-      font-family: 'Cinzel', serif;
-    }
-
-    /* Main Layout */
-    .container {
-      max-width: 1200px;
-      margin: 3.5rem auto;
-      padding: 0 1.5rem;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .section-header h2 {
-      font-size: 2rem;
-      color: var(--terracotta-dark);
-      margin-bottom: 0.6rem;
-    }
-
-    .section-header p {
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    /* Itinerary Timeline */
-    .timeline {
-      position: relative;
-      margin: 2rem 0;
-    }
-
+    .countdown-box strong { color: var(--gold-light); font-size: 1.1rem; font-family: 'Cinzel', serif; }
+    .container { max-width: 1200px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    .section-header { text-align: center; margin-bottom: 3rem; }
+    .section-header h2 { font-size: 2rem; color: var(--terracotta-dark); margin-bottom: 0.6rem; }
+    .section-header p { color: var(--muted); font-size: 0.98rem; }
+    .timeline { position: relative; margin: 2rem 0; }
     .timeline::before {
       content: '';
       position: absolute;
@@ -297,7 +173,6 @@
       background: var(--gold);
       opacity: 0.35;
     }
-
     .day-card {
       position: relative;
       margin-left: 68px;
@@ -309,17 +184,8 @@
       border: 1px solid var(--border);
       transition: transform 0.2s, border-color 0.2s;
     }
-
-    .day-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--gold);
-    }
-
-    .day-card.active-day {
-      border: 2px solid var(--terracotta);
-      background: #FFFDF9;
-    }
-
+    .day-card:hover { transform: translateY(-2px); border-color: var(--gold); }
+    .day-card.active-day { border: 2px solid var(--terracotta); background: #FFFDF9; }
     .day-badge {
       position: absolute;
       left: -68px;
@@ -334,16 +200,11 @@
       justify-content: center;
       font-family: 'Cinzel', serif;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       box-shadow: 0 4px 12px rgba(168, 66, 43, 0.35);
       border: 3px solid var(--marble);
     }
-
-    .day-card.active-day .day-badge {
-      background: var(--gold);
-      color: var(--charcoal);
-    }
-
+    .day-card.active-day .day-badge { background: var(--gold); color: var(--charcoal); }
     .day-head {
       display: flex;
       justify-content: space-between;
@@ -352,27 +213,9 @@
       border-bottom: 1px dashed var(--border);
       padding-bottom: 0.6rem;
     }
-
-    .day-title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--charcoal);
-    }
-
-    .day-city {
-      font-family: 'Cinzel', serif;
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    .spots-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 0.7rem;
-    }
-
+    .day-title { font-size: 1.35rem; font-weight: 700; color: var(--charcoal); }
+    .day-city { font-family: 'Cinzel', serif; color: var(--gold); font-weight: 700; font-size: 0.95rem; }
+    .spots-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.7rem; }
     .spot-item {
       display: flex;
       align-items: center;
@@ -382,21 +225,8 @@
       border-radius: 6px;
       background: #FAF8F5;
     }
-
-    .spot-item input[type="checkbox"] {
-      accent-color: var(--terracotta);
-      width: 17px;
-      height: 17px;
-      cursor: pointer;
-    }
-
-    .spot-arch {
-      font-size: 0.8rem;
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    /* Architecture Photo Gallery by Themes */
+    .spot-item input[type="checkbox"] { accent-color: var(--terracotta); width: 17px; height: 17px; cursor: pointer; }
+    .spot-arch { font-size: 0.8rem; color: var(--muted); font-style: italic; }
     .theme-section {
       background: var(--marble-card);
       border-radius: var(--radius);
@@ -405,30 +235,10 @@
       box-shadow: var(--shadow);
       border: 1px solid var(--border);
     }
-
-    .theme-header {
-      margin-bottom: 1.6rem;
-    }
-
-    .theme-num {
-      font-family: 'Cinzel', serif;
-      font-size: 1.5rem;
-      color: var(--gold);
-      font-weight: 700;
-    }
-
-    .theme-title {
-      font-size: 1.6rem;
-      color: var(--terracotta-dark);
-      margin-top: -0.2rem;
-    }
-
-    .theme-sub {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-top: 0.2rem;
-    }
-
+    .theme-header { margin-bottom: 1.6rem; }
+    .theme-num { font-family: 'Cinzel', serif; font-size: 1.5rem; color: var(--gold); font-weight: 700; }
+    .theme-title { font-size: 1.6rem; color: var(--terracotta-dark); margin-top: -0.2rem; }
+    .theme-sub { font-size: 0.95rem; color: var(--muted); margin-top: 0.2rem; }
     .theme-desc {
       font-size: 0.98rem;
       color: #4a4640;
@@ -439,14 +249,12 @@
       border-left: 3px solid var(--terracotta);
       border-radius: 4px;
     }
-
     .photo-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 1.2rem;
       margin-top: 1.5rem;
     }
-
     .photo-card {
       position: relative;
       border-radius: 10px;
@@ -456,18 +264,8 @@
       cursor: pointer;
       group: relative;
     }
-
-    .photo-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    .photo-card:hover img {
-      transform: scale(1.06);
-    }
-
+    .photo-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .photo-card:hover img { transform: scale(1.06); }
     .photo-caption {
       position: absolute;
       bottom: 0;
@@ -475,13 +273,11 @@
       right: 0;
       background: linear-gradient(180deg, transparent 0%, rgba(35,34,32,0.85) 100%);
       color: #fff;
-      padding: 1.2rem 0.8rem 0.6rem;
+      padding: 1.2rem 0.8rem 0.6rem 0.6rem;
       font-size: 0.82rem;
       font-weight: 500;
       text-align: center;
     }
-
-    /* Travel Journal & Thoughts */
     .journal-section {
       background: #FFFDF9;
       border: 1px solid var(--gold-light);
@@ -489,14 +285,7 @@
       padding: 2.5rem;
       box-shadow: var(--shadow);
     }
-
-    .journal-actions {
-      display: flex;
-      justify-content: flex-end;
-      gap: 0.8rem;
-      margin-bottom: 1.8rem;
-    }
-
+    .journal-actions { display: flex; justify-content: flex-end; gap: 0.8rem; margin-bottom: 1.8rem; }
     .btn-gold {
       background: var(--gold);
       color: var(--charcoal);
@@ -511,18 +300,8 @@
       gap: 0.5rem;
       transition: all 0.2s;
     }
-
-    .btn-gold:hover {
-      background: #d4af37;
-      transform: translateY(-1px);
-    }
-
-    .journal-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
+    .btn-gold:hover { background: #d4af37; transform: translateY(-1px); }
+    .journal-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
     .journal-card {
       background: #fff;
       border: 1px solid var(--border);
@@ -533,21 +312,8 @@
       display: flex;
       flex-direction: column;
     }
-
-    .journal-card .j-date {
-      font-size: 0.78rem;
-      color: var(--gold);
-      font-family: 'Cinzel', serif;
-      font-weight: 700;
-    }
-
-    .journal-card .j-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin: 0.4rem 0;
-      color: var(--charcoal);
-    }
-
+    .journal-card .j-date { font-size: 0.78rem; color: var(--gold); font-family: 'Cinzel', serif; font-weight: 700; }
+    .journal-card .j-title { font-size: 1.15rem; font-weight: 700; margin: 0.4rem 0; color: var(--charcoal); }
     .journal-card .j-spot {
       display: inline-block;
       font-size: 0.78rem;
@@ -558,15 +324,7 @@
       margin-bottom: 0.8rem;
       width: fit-content;
     }
-
-    .journal-card .j-content {
-      font-size: 0.92rem;
-      color: #555;
-      line-height: 1.6;
-      flex: 1;
-      white-space: pre-line;
-    }
-
+    .journal-card .j-content { font-size: 0.92rem; color: #555; line-height: 1.6; flex: 1; white-space: pre-line; }
     .journal-card .j-del {
       position: absolute;
       top: 1.2rem;
@@ -578,12 +336,7 @@
       font-size: 0.9rem;
       transition: color 0.2s;
     }
-
-    .journal-card .j-del:hover {
-      color: var(--terracotta);
-    }
-
-    /* Modal / Popup */
+    .journal-card .j-del:hover { color: var(--terracotta); }
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -595,7 +348,6 @@
       justify-content: center;
       padding: 1.5rem;
     }
-
     .modal-box {
       background: #fff;
       width: 100%;
@@ -606,7 +358,6 @@
       max-height: 90vh;
       overflow-y: auto;
     }
-
     .modal-close {
       position: absolute;
       top: 1.4rem;
@@ -617,11 +368,7 @@
       cursor: pointer;
       color: var(--muted);
     }
-
-    .form-group {
-      margin-bottom: 1.2rem;
-    }
-
+    .form-group { margin-bottom: 1.2rem; }
     .form-group label {
       display: block;
       font-size: 0.85rem;
@@ -629,7 +376,6 @@
       margin-bottom: 0.4rem;
       color: var(--charcoal);
     }
-
     .form-group input, .form-group textarea, .form-group select {
       width: 100%;
       padding: 0.75rem 1rem;
@@ -638,13 +384,7 @@
       font-family: inherit;
       font-size: 0.92rem;
     }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    /* Guide Info Banner */
+    .form-group textarea { resize: vertical; min-height: 120px; }
     .guide-banner {
       display: flex;
       align-items: center;
@@ -655,7 +395,6 @@
       margin-top: 3rem;
       border: 1px solid var(--border);
     }
-
     .guide-photo {
       width: 110px;
       height: 110px;
@@ -663,8 +402,6 @@
       object-fit: cover;
       border: 3px solid var(--gold);
     }
-
-    /* Footer */
     footer {
       background: var(--charcoal);
       color: #999;
@@ -673,28 +410,22 @@
       font-size: 0.85rem;
       margin-top: 5rem;
     }
-
-    footer a {
-      color: var(--gold-light);
-    }
-
-    /* Lightbox Modal */
+    footer a { color: var(--gold-light); }
     #lightboxModal img {
       max-width: 90vw;
       max-height: 85vh;
       border-radius: 8px;
       box-shadow: 0 5px 30px rgba(0,0,0,0.5);
     }
-
     @media (max-width: 768px) {
       .hero-title { font-size: 2rem; }
       .timeline::before { left: 24px; }
       .day-card { margin-left: 54px; padding: 1.2rem 1.4rem; }
-      .day-badge { left: -54px; width: 40px; height: 40px; font-size: 0.8rem; }
+      .day-badge { left: -54px; top: 1.2rem; width: 40px; height: 40px; font-size: 0.8rem; }
       nav a { display: none; }
       .guide-banner { flex-direction: column; text-align: center; }
     }
-  </style>
+    </style>
 </head>
 <body>
 
@@ -757,7 +488,7 @@
     <!-- Section 1: Itinerary -->
     <div id="itinerary" class="section-header">
       <h2>DETAILED ITINERARY</h2>
-      <p>가브리엘라의 9박 10일 이탈리아 건축 답사 타임라인 & 답사 체크</p>
+      <p>가브리엘라의 13박 15일 이탈리아 건축 답사 타임라인 & 답사 체크</p>
     </div>
 
     <div class="timeline" id="timelineList">
@@ -772,184 +503,100 @@
 
     <!-- Theme 01: Rome & Vatican -->
     <div class="theme-section">
-      <div class="theme-header">
-        <div class="theme-num">01 / DAY 1-3</div>
-        <h3 class="theme-title">로마 · 바티칸 (ROME & VATICAN)</h3>
-        <div class="theme-sub">로마를 흐르는 다양한 시대적 층위</div>
-      </div>
-      <p class="theme-desc">
-        고대로마의 대제국 콘크리트 판테온과 콜로세움에서부터 바로크 시대 베르니니와 보로미니의 공간 극장, 그리고 자하 하디드의 MAXXI와 렌조 피아노의 파르코 델라 뮤지카에 이르기까지 2000년의 시간이 공존하는 장소입니다.
-      </p>
-      <div class="photo-grid">
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_0_e148c022.jpg', '바티칸 대성당')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_0_e148c022.jpg" alt="바티칸 대성당" loading="lazy">
-          <div class="photo-caption">바티칸 대성당</div>
+        <div class="theme-header">
+            <div class="theme-num">01 / DAY 3-5</div>
+            <h3 class="theme-title">로마 · 바티칸 (ROME & VATICAN)</h3>
+            <div class="theme-sub">로마를 흐르는 다양한 시대적 층위</div>
         </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_5_c5b3e243.jpg', '판테온 (Pantheon)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_5_c5b3e243.jpg" alt="판테온" loading="lazy">
-          <div class="photo-caption">판테온 (Pantheon)</div>
+        <p class="theme-desc">
+            고대로마의 대제국 콘크리트 판테온과 콜로세움에서부터 바로크 시대 베르니니와 보로미니의 공간 극장, 그리고 자하 하디드의 MAXXI와 렌조 피아노의 파르코 델라 뮤지카에 이르기까지 2000년의 시간이 공존하는 장소입니다.
+        </p>
+        <div class="photo-grid">
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_0_e148c022.jpg', '바티칸 대성당')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_0_e148c022.jpg" alt="바티칸 대성당" loading="lazy"><div class="photo-caption">바티칸 대성당</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_5_c5b3e243.jpg', '판테온 (Pantheon)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_5_c5b3e243.jpg" alt="판테온" loading="lazy"><div class="photo-caption">판테온 (Pantheon)</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_3_36567314.jpg', '산 카를로 알레 콰트로 폰타네 (Borromini)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_3_36567314.jpg" alt="산 카를로 알레 콰트로 폰타네" loading="lazy"><div class="photo-caption">산 카를로 성당 (Borromini)</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_6_eb773515.jpg', '산탄드레아 알 퀴리날레 (Bernini)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_6_eb773515.jpg" alt="산탄드레아 알 퀴리날레" loading="lazy"><div class="photo-caption">산탄드레아 알 퀴리날레 (Bernini)</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_8_f5f97979.jpg', '파르코 델라 뮤지카 (Renzo Piano)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_8_f5f97979.jpg" alt="파르코 델라 뮤지카" loading="lazy"><div class="photo-caption">파르코 델라 뮤지카 (Renzo Piano)</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_9_2cdc787f.jpg', 'MAXXI 국립21세기미술관 (Zaha Hadid)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_9_2cdc787f.jpg" alt="MAXXI" loading="lazy"><div class="photo-caption">MAXXI 미술관 (Zaha Hadid)</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_11_a6066d65.jpg', '콜로세움')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_11_a6066d65.jpg" alt="콜로세움" loading="lazy"><div class="photo-caption">로마 콜로세움</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_4_b038a3d7.jpg', '나보나 광장')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_4_b038a3d7.jpg" alt="나보나 광장" loading="lazy"><div class="photo-caption">나보나 광장</div></div>
         </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_3_36567314.jpg', '산 카를로 알레 콰트로 폰타네 (Borromini)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_3_36567314.jpg" alt="산 카를로 알레 콰트로 폰타네" loading="lazy">
-          <div class="photo-caption">산 카를로 성당 (Borromini)</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_6_eb773515.jpg', '산탄드레아 알 퀴리날레 (Bernini)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_6_eb773515.jpg" alt="산탄드레아 알 퀴리날레" loading="lazy">
-          <div class="photo-caption">산탄드레아 알 퀴리날레 (Bernini)</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_8_f5f97979.jpg', '파르코 델라 뮤지카 (Renzo Piano)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_8_f5f97979.jpg" alt="파르코 델라 뮤지카" loading="lazy">
-          <div class="photo-caption">파르코 델라 뮤지카 (Renzo Piano)</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_9_2cdc787f.jpg', 'MAXXI 국립21세기미술관 (Zaha Hadid)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_9_2cdc787f.jpg" alt="MAXXI" loading="lazy">
-          <div class="photo-caption">MAXXI 미술관 (Zaha Hadid)</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_11_a6066d65.jpg', '콜로세움')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_11_a6066d65.jpg" alt="콜로세움" loading="lazy">
-          <div class="photo-caption">로마 콜로세움</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_4_b038a3d7.jpg', '나보나 광장')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u1_4_b038a3d7.jpg" alt="나보나 광장" loading="lazy">
-          <div class="photo-caption">나보나 광장</div>
-        </div>
-      </div>
     </div>
 
     <!-- Theme 02: Siena -->
     <div class="theme-section">
-      <div class="theme-header">
-        <div class="theme-num">02 / DAY 4</div>
-        <h3 class="theme-title">시에나 (SIENA)</h3>
-        <div class="theme-sub">치열했던 역사 뒤로 멈춰버린 붉은 중세도시</div>
-      </div>
-      <p class="theme-desc">
-        시에나 특유의 붉은 벽돌로 지어진 집들과 마을을 채우는 구불구불한 좁은 골목, 권력의 견제와 민주주의의 상징인 부채꼴 캄포 광장, 그리고 흑백 줄무늬의 시에나 두오모가 있는 살아있는 중세 건축 도시입니다.
-      </p>
-      <div class="photo-grid">
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_0_750a3320.jpg', '시에나 캄포광장')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_0_750a3320.jpg" alt="캄포광장" loading="lazy">
-          <div class="photo-caption">시에나 캄포 광장</div>
+        <div class="theme-header">
+            <div class="theme-num">02 / DAY 6</div>
+            <h3 class="theme-title">시에나 (SIENA)</h3>
+            <div class="theme-sub">치열했던 역사 뒤로 멈춰버린 붉은 중세도시</div>
         </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_4_15dadd64.jpg', '시에나 두오모')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_4_15dadd64.jpg" alt="시에나 두오모" loading="lazy">
-          <div class="photo-caption">시에나 두오모 성당</div>
+        <p class="theme-desc">
+            시에나 특유의 붉은 벽돌로 지어진 집들과 마을을 채우는 구불구불한 좁은 골목, 권력의 견제와 민주주의의 상징인 부채꼴 캄포 광장, 그리고 흑백 줄무늬의 시에나 두오모가 있는 살아있는 중세 건축 도시입니다.
+        </p>
+        <div class="photo-grid">
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_0_750a3320.jpg', '시에나 캄포광장')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_0_750a3320.jpg" alt="캄포광장" loading="lazy"><div class="photo-caption">시에나 캄포 광장</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_4_15dadd64.jpg', '시에나 두오모')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_4_15dadd64.jpg" alt="시에나 두오모" loading="lazy"><div class="photo-caption">시에나 두오모 성당</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_1_57f949a3.jpg', '푸블리코 궁전')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_1_57f949a3.jpg" alt="푸블리코 궁전" loading="lazy"><div class="photo-caption">푸블리코 궁전</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_3_4833d83d.jpg', '살림베니 궁전')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_3_4833d83d.jpg" alt="살림베니 궁전" loading="lazy"><div class="photo-caption">살림베니 궁전</div></div>
         </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_1_57f949a3.jpg', '푸블리코 궁전')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_1_57f949a3.jpg" alt="푸블리코 궁전" loading="lazy">
-          <div class="photo-caption">푸블리코 궁전</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_3_4833d83d.jpg', '살림베니 궁전')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u3_3_4833d83d.jpg" alt="살림베니 궁전" loading="lazy">
-          <div class="photo-caption">살림베니 궁전</div>
-        </div>
-      </div>
     </div>
 
     <!-- Theme 03: Florence -->
     <div class="theme-section">
-      <div class="theme-header">
-        <div class="theme-num">03 / DAY 5-6</div>
-        <h3 class="theme-title">피렌체 (FIRENZE)</h3>
-        <div class="theme-sub">도시와 건축으로 읽는 르네상스의 발상지</div>
-      </div>
-      <p class="theme-desc">
-        천재 브루넬레스키의 거대한 붉은 돔 피렌체 대성당, 알베르티의 비례미가 돋보이는 산타 마리아 노벨라 성당, 르네상스 고아원 회랑의 인간적 척도, 그리고 아르노 강 위의 베키오 다리와 미켈란젤로 언덕의 파노라마를 담습니다.
-      </p>
-      <div class="photo-grid">
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_11_bc211dae.jpg', '피렌체 두오모 (Brunelleschi)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_11_bc211dae.jpg" alt="피렌체 대성당" loading="lazy">
-          <div class="photo-caption">피렌체 대성당 돔 (Brunelleschi)</div>
+        <div class="theme-header">
+            <div class="theme-num">03 / DAY 7-8</div>
+            <h3 class="theme-title">피렌체 (FIRENZE)</h3>
+            <div class="theme-sub">도시와 건축으로 읽는 르네상스의 발상지</div>
         </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_0_5ace89fb.jpg', '베키오 다리 (Ponte Vecchio)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_0_5ace89fb.jpg" alt="베키오 다리" loading="lazy">
-          <div class="photo-caption">베키오 다리</div>
+        <p class="theme-desc">
+            천재 브루넬레스키의 거대한 붉은 돔 피렌체 대성당, 알베르티의 비례미가 돋보이는 산타 마리아 노벨라 성당, 르네상스 고아원 회랑의 인간적 척도, 그리고 아르노 강 위의 베키오 다리와 미켈란젤로 언덕의 파노라마를 담습니다.
+        </p>
+        <div class="photo-grid">
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_11_bc211dae.jpg', '피렌체 두오모 (Brunelleschi)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_11_bc211dae.jpg" alt="피렌체 대성당" loading="lazy"><div class="photo-caption">피렌체 대성당 돔 (Brunelleschi)</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_0_5ace89fb.jpg', '베키오 다리 (Ponte Vecchio)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_0_5ace89fb.jpg" alt="베키오 다리" loading="lazy"><div class="photo-caption">베키오 다리</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_1_4aedc878.jpg', '산타 마리아 노벨라 성당 (Leon Battista Alberti)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_1_4aedc878.jpg" alt="산타 마리아 노벨라" loading="lazy"><div class="photo-caption">산타 마리아 노벨라 (Alberti)</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_2_3c198717.jpg', '피렌체 고아원 회랑 (Brunelleschi)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_2_3c198717.jpg" alt="피렌체 고아원" loading="lazy"><div class="photo-caption">피렌체 고아원 (Brunelleschi)</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_3_6c2e02f6.jpg', '산타 크로체 & 파치 채플')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_3_6c2e02f6.jpg" alt="파치채플" loading="lazy"><div class="photo-caption">파치채플 (Brunelleschi)</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_8_ee0654ff.jpg', '미켈란젤로 광장에서 바라본 전경')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_8_ee0654ff.jpg" alt="미켈란젤로 언덕" loading="lazy"><div class="photo-caption">미켈란젤로 언덕 전경</div></div>
         </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_1_4aedc878.jpg', '산타 마리아 노벨라 성당 (Leon Battista Alberti)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_1_4aedc878.jpg" alt="산타 마리아 노벨라" loading="lazy">
-          <div class="photo-caption">산타 마리아 노벨라 (Alberti)</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_2_3c198717.jpg', '피렌체 고아원 회랑 (Brunelleschi)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_2_3c198717.jpg" alt="피렌체 고아원" loading="lazy">
-          <div class="photo-caption">피렌체 고아원 (Brunelleschi)</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_3_6c2e02f6.jpg', '산타 크로체 & 파치 채플')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_3_6c2e02f6.jpg" alt="파치채플" loading="lazy">
-          <div class="photo-caption">파치채플 (Brunelleschi)</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_8_ee0654ff.jpg', '미켈란젤로 광장에서 바라본 전경')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u4_8_ee0654ff.jpg" alt="미켈란젤로 언덕" loading="lazy">
-          <div class="photo-caption">미켈란젤로 언덕 전경</div>
-        </div>
-      </div>
     </div>
 
     <!-- Theme 04: Antinori Winery -->
     <div class="theme-section">
-      <div class="theme-header">
-        <div class="theme-num">04 / DAY 5</div>
-        <h3 class="theme-title">토스카나 풍경에 스며든 감각의 건축</h3>
-        <div class="theme-sub">안티노리 키안티 와이너리 & 산 조반니 바티스타 교회</div>
-      </div>
-      <p class="theme-desc">
-        토스카나 구릉지대 포도밭 아래로 몸을 숨긴 안티노리 와이너리의 환상적인 코르텐강 나선형 계단과 땅속 숙성고, 그리고 구리 지붕이 천막처럼 펼쳐진 조반니 미켈루치의 산 조반니 바티스타 성당의 극적인 공간감을 경험합니다.
-      </p>
-      <div class="photo-grid">
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_0_c46bc8a5.jpg', '안티노리 와이너리 외관 (Archea Associati)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_0_c46bc8a5.jpg" alt="안티노리 와이너리" loading="lazy">
-          <div class="photo-caption">안티노리 와이너리 외관</div>
+        <div class="theme-header">
+            <div class="theme-num">04 / DAY 7</div>
+            <h3 class="theme-title">토스카나 풍경에 스며든 감각의 건축</h3>
+            <div class="theme-sub">안티노리 키안티 와이너리 & 산 조반니 바티스타 교회</div>
         </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_1_6b7c1677.jpg', '안티노리 와이너리 나선계단')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_1_6b7c1677.jpg" alt="안티노리 계단" loading="lazy">
-          <div class="photo-caption">안티노리 상징 나선형 계단</div>
+        <p class="theme-desc">
+            토스카나 구릉지대 포도밭 아래로 몸을 숨긴 안티노리 와이너리의 환상적인 코르텐강 나선형 계단과 땅속 숙성고, 그리고 구리 지붕이 천막처럼 펼쳐진 조반니 미켈루치의 산 조반니 바티스타 성당의 극적인 공간감을 경험합니다.
+        </p>
+        <div class="photo-grid">
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_0_c46bc8a5.jpg', '안티노리 와이너리 외관 (Archea Associati)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_0_c46bc8a5.jpg" alt="안티노리 와이너리" loading="lazy"><div class="photo-caption">안티노리 와이너리 외관</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_1_6b7c1677.jpg', '안티노리 와이너리 나선계단')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_1_6b7c1677.jpg" alt="안티노리 계단" loading="lazy"><div class="photo-caption">안티노리 상징 나선형 계단</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_3_21a632c5.jpg', '산 조반니 바티스타 성당 (Michelucci)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_3_21a632c5.jpg" alt="산 조반니 바티스타" loading="lazy"><div class="photo-caption">산 조반니 바티스타 교회</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_2_9bce5e74.jpg', '키안티 구릉과 와이너리 지표면')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_2_9bce5e74.jpg" alt="키안티 구릉" loading="lazy"><div class="photo-caption">키안티 구릉과 포도밭 풍경</div></div>
         </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_3_21a632c5.jpg', '산 조반니 바티스타 성당 (Michelucci)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_3_21a632c5.jpg" alt="산 조반니 바티스타" loading="lazy">
-          <div class="photo-caption">산 조반니 바티스타 교회</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_2_9bce5e74.jpg', '키안티 구릉과 와이너리 지표면')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u5_2_9bce5e74.jpg" alt="키안티 구릉" loading="lazy">
-          <div class="photo-caption">키안티 구릉과 포도밭 풍경</div>
-        </div>
-      </div>
     </div>
 
     <!-- Theme 05: Venice & Brion Cemetery -->
     <div class="theme-section">
-      <div class="theme-header">
-        <div class="theme-num">05 / DAY 7-9</div>
-        <h3 class="theme-title">베네치아 & 브리온 묘원 (VENEZIA & CARLO SCARPA)</h3>
-        <div class="theme-sub">바다의 도시에 흐르는 개방성과 시가 된 건축</div>
-      </div>
-      <p class="theme-desc">
-        수많은 운하 위에 떠 있는 산 마르코 광장과 팔라디오의 유산, 안도 타다오의 푼타 델라 도가나, 칼라트라바의 코스티투치오네 다리, 그리고 이탈리아 디테일의 거장 카를로 스카르파가 남편과 아내의 영원한 사랑과 삶/죽음의 경계를 시로 직조해낸 '브리온 묘원(Tomba Brion)'을 만납니다.
-      </p>
-      <div class="photo-grid">
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u7_0_c99d74eb.jpg', '브리온 묘원 - 카를로 스카르파 (Tomba Brion)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u7_0_c99d74eb.jpg" alt="브리온 묘원" loading="lazy">
-          <div class="photo-caption">브리온 묘원 (Carlo Scarpa)</div>
+        <div class="theme-header">
+            <div class="theme-num">05 / DAY 9-11</div>
+            <h3 class="theme-title">베네치아 & 브리온 묘원 (VENEZIA & CARLO SCARPA)</h3>
+            <div class="theme-sub">바다의 도시에 흐르는 개방성과 시가 된 건축</div>
         </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u7_1_0732076b.jpg', '브리온 묘원 두 원형 개구부 디테일')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u7_1_0732076b.jpg" alt="브리온 묘원 원형개구부" loading="lazy">
-          <div class="photo-caption">브리온 묘원 연리지 원형창</div>
+        <p class="theme-desc">
+            수많은 운하 위에 떠 있는 산 마르코 광장과 팔라디오의 유산, 안도 타다오의 푼타 델라 도가나, 칼라트라바의 코스티투치오네 다리, 그리고 이탈리아 디테일의 거장 카를로 스카르파가 남편과 아내의 영원한 사랑과 삶/죽음의 경계를 시로 직조해낸 '브리온 묘원(Tomba Brion)'을 만납니다.
+        </p>
+        <div class="photo-grid">
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u7_0_c99d74eb.jpg', '브리온 묘원 - 카를로 스카르파 (Tomba Brion)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u7_0_c99d74eb.jpg" alt="브리온 묘원" loading="lazy"><div class="photo-caption">브리온 묘원 (Carlo Scarpa)</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u7_1_0732076b.jpg', '브리온 묘원 두 원형 개구부 디테일')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u7_1_0732076b.jpg" alt="브리온 묘원 원형개구부" loading="lazy"><div class="photo-caption">브리온 묘원 연리지 원형창</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u7_2_fd1f18fa.jpg', '브리온 묘원 수공간과 정자')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u7_2_fd1f18fa.jpg" alt="브리온 묘원 수공간" loading="lazy"><div class="photo-caption">물과 콘크리트의 시퀀스</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u6_0_0b21f6e3.jpg', '산 마르코 광장')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u6_0_0b21f6e3.jpg" alt="산 마르코 광장" loading="lazy"><div class="photo-caption">베네치아 산 마르코 광장</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u6_7_98f1dd57.jpg', '푼타 델라 도가나 (Ando Tadao)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u6_7_98f1dd57.jpg" alt="푼타 델라 도가나" loading="lazy"><div class="photo-caption">푼타 델라 도가나 (Ando Tadao)</div></div>
+            <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u6_5_7b4271c5.jpg', '코스티투치오네 다리 (Santiago Calatrava)')"><img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u6_5_7b4271c5.jpg" alt="코스티투치오네 다리" loading="lazy"><div class="photo-caption">코스티투치오네 다리 (Calatrava)</div></div>
         </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u7_2_fd1f18fa.jpg', '브리온 묘원 수공간과 정자')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u7_2_fd1f18fa.jpg" alt="브리온 묘원 수공간" loading="lazy">
-          <div class="photo-caption">물과 콘크리트의 시퀀스</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u6_0_0b21f6e3.jpg', '산 마르코 광장')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u6_0_0b21f6e3.jpg" alt="산 마르코 광장" loading="lazy">
-          <div class="photo-caption">베네치아 산 마르코 광장</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u6_7_98f1dd57.jpg', '푼타 델라 도가나 (Ando Tadao)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u6_7_98f1dd57.jpg" alt="푼타 델라 도가나" loading="lazy">
-          <div class="photo-caption">푼타 델라 도가나 (Ando Tadao)</div>
-        </div>
-        <div class="photo-card" onclick="openLightbox('https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u6_5_7b4271c5.jpg', '코스티투치오네 다리 (Santiago Calatrava)')">
-          <img src="https://around-trip.com/uploads/trvbody_313738333731393735313738375f7465347369_u6_5_7b4271c5.jpg" alt="코스티투치오네 다리" loading="lazy">
-          <div class="photo-caption">코스티투치오네 다리 (Calatrava)</div>
-        </div>
-      </div>
     </div>
 
     <!-- Section 3: Gabriella's Travel Journal & Notes -->
@@ -958,7 +605,6 @@
         <h2>GABRIELLA'S TRAVEL JOURNAL</h2>
         <p>가브리엘라의 현장 기록 & 건축 단상 노트 (실시간 로컬스토리지 저장)</p>
       </div>
-
       <div class="journal-actions">
         <button class="btn-gold" onclick="exportJournals()">
           <i class="fa-solid fa-download"></i> 기록 백업 (JSON)
@@ -967,7 +613,6 @@
           <i class="fa-solid fa-pen-nib"></i> 새 단상 기록하기
         </button>
       </div>
-
       <div class="journal-list" id="journalListContainer">
         <!-- Journals rendered here -->
       </div>
@@ -975,14 +620,14 @@
 
     <!-- Guide Info Banner -->
     <div class="guide-banner">
-      <img src="https://around-trip.com/uploads/gd_photo_c774c218acbd20acf5c778ac00c774b4dc_f51bc035.jpg" alt="이수경 공인가이드" class="guide-photo">
-      <div>
-        <h3 style="font-size: 1.25rem; color: var(--terracotta);">건축가이드: 이수경 이탈리아 공인가이드</h3>
-        <p style="font-size: 0.9rem; color: var(--muted); margin: 0.3rem 0;">바티칸 공인가이드 / 이탈리아 정부 공인가이드 / 건축캠프 전담 건축가이드</p>
-        <p style="font-size: 0.92rem; color: #444;">
-          "2000년의 시간을 관통하는 이탈리아의 건축은 눈으로 보는 풍경이 아니라 그 시대를 치열하게 살았던 사람들의 철학과 도시의 호흡을 온몸으로 마주하는 시간입니다."
-        </p>
-      </div>
+        <img src="https://around-trip.com/uploads/gd_photo_c774c218acbd20acf5c778ac00c774b4dc_f51bc035.jpg" alt="이수경 공인가이드" class="guide-photo">
+        <div>
+            <h3 style="font-size: 1.25rem; color: var(--terracotta);">건축가이드: 이수경 이탈리아 공인가이드</h3>
+            <p style="font-size: 0.9rem; color: var(--muted); margin: 0.3rem 0;">바티칸 공인가이드 / 이탈리아 정부 공인가이드 / 건축캠프 전담 건축가이드</p>
+            <p style="font-size: 0.92rem; color: #444;">
+                "2000년의 시간을 관통하는 이탈리아의 건축은 눈으로 보는 풍경이 아니라 그 시대를 치열하게 살았던 사람들의 철학과 도시의 호흡을 온몸으로 마주하는 시간입니다."
+            </p>
+        </div>
     </div>
 
   </div>
@@ -994,19 +639,7 @@
       <h3 style="margin-bottom: 1.2rem; color: var(--terracotta);">📍 현재 나의 여정 위치 업데이트</h3>
       <div class="form-group">
         <label>현재 진행 중인 Day 선택</label>
-        <select id="currentDaySelect">
-          <option value="D-Day">출발 대기 중 (D-Day 카운트다운)</option>
-          <option value="Day 1">Day 1: 로마 공항 도착 & 오리엔테이션</option>
-          <option value="Day 2">Day 2: 로마 콜로세움 & 바로크 성당 & MAXXI</option>
-          <option value="Day 3">Day 3: 바티칸 대성당 & 시스티나 경당 & 판테온</option>
-          <option value="Day 4">Day 4: 시에나 두오모 & 캄포 광장</option>
-          <option value="Day 5">Day 5: 토스카나 안티노리 와이너리 & 피렌체</option>
-          <option value="Day 6">Day 6: 피렌체 두오모 & 브루넬레스키 건축</option>
-          <option value="Day 7">Day 7: 베네치아 산 마르코 & 퀴리니 스탐팔리아</option>
-          <option value="Day 8">Day 8: 베네치아 & 카를로 스카르파 브리온 묘원</option>
-          <option value="Day 9">Day 9: 베네치아 자유시간 & 귀국</option>
-          <option value="Complete">답사 완료: 아름다운 건축의 기억을 품고 귀국</option>
-        </select>
+        <select id="currentDaySelect"></select>
       </div>
       <div class="form-group">
         <label>방문 중인 장소 / 건축물</label>
@@ -1063,382 +696,153 @@
     <p style="margin-top: 0.4rem; font-size: 0.78rem;">Designed for Architectural Expedition in Rome · Siena · Firenze · Venezia</p>
   </footer>
 
-  <script>
-    // 1. Full Itinerary Raw Data from Official Trip Info
+<script>
     const itineraryData = [
-      {
-        day: "Day 1",
-        city: "ROMA",
-        title: "인천 출국 & 로마 공항 도착",
-        spots: [
-          { name: "인천국제공항 출국", arch: "비행 여정" },
-          { name: "로마 피우미치노 공항 도착", arch: "로마 입국" },
-          { name: "호텔 체크인 & 참가자 오리엔테이션", arch: "이수경 가이드 미팅" }
-        ]
-      },
-      {
-        day: "Day 2",
-        city: "ROMA",
-        title: "고대 로마와 바로크 라이벌, 그리고 현대 건축",
-        spots: [
-          { name: "콜로세움 (Colosseum)", arch: "고대 로마 엔지니어링" },
-          { name: "산탄드레아 알 퀴리날레 성당", arch: "Lorenzo Bernini" },
-          { name: "산 카를로 알레 콰트로 폰타네 성당", arch: "Francesco Borromini" },
-          { name: "파르코 델라 뮤지카 강당", arch: "Renzo Piano" },
-          { name: "MAXXI 국립 21세기 미술관", arch: "Zaha Hadid" }
-        ]
-      },
-      {
-        day: "Day 3",
-        city: "ROMA · VATICAN",
-        title: "바티칸의 신성과 판테온의 경이",
-        spots: [
-          { name: "바티칸 대성당 (San Pietro)", arch: "Michelangelo & Maderno" },
-          { name: "시스티나 경당", arch: "천장화 & 최후의 심판" },
-          { name: "산타녜세 인 아고네 성당", arch: "Francesco Borromini" },
-          { name: "산티보 알라 사피엔차 성당", arch: "Francesco Borromini" },
-          { name: "판테온 (Pantheon)", arch: "고대 로마 돔 구조의 정수" }
-        ]
-      },
-      {
-        day: "Day 4",
-        city: "SIENA",
-        title: "붉은 벽돌과 부채꼴 캄포 광장의 중세 도시",
-        spots: [
-          { name: "시에나 두오모 대성당", arch: "고딕 & 로마네스크 줄무늬 대리석" },
-          { name: "푸블리코 궁전 & 망자의 탑", arch: "14세기 시청사" },
-          { name: "캄포 광장 (Piazza del Campo)", arch: "도시 민주주의의 심장" },
-          { name: "폰테 브란다 (Fontebranda)", arch: "중세 지하 분수" },
-          { name: "살림베니 궁전", arch: "세계 최고 은행 본점" },
-          { name: "두오모 오페라 박물관", arch: "파사드 조각 & 전망" }
-        ]
-      },
-      {
-        day: "Day 5",
-        city: "FIRENZE · CHIANTI",
-        title: "대지 속에 묻힌 와이너리와 르네상스의 서막",
-        spots: [
-          { name: "안티노리 키안티 와이너리", arch: "Archea Associati (시음회)" },
-          { name: "산 조반니 바티스타 교회", arch: "Giovanni Michelucci" },
-          { name: "산타 마리아 노벨라 성당", arch: "Leon Battista Alberti" },
-          { name: "메디치 예배당", arch: "Michelangelo" },
-          { name: "우피치 미술관", arch: "Giorgio Vasari" },
-          { name: "베키오 다리 (Ponte Vecchio)", arch: "아르노강의 중세 상가교량" }
-        ]
-      },
-      {
-        day: "Day 6",
-        city: "FIRENZE",
-        title: "브루넬레스키의 붉은 돔과 르네상스 원근법",
-        spots: [
-          { name: "피렌체 대성당 쿠폴라 (두오모)", arch: "Filippo Brunelleschi" },
-          { name: "산 지오반니 세례당", arch: "천국의 문" },
-          { name: "피렌체 고아원 (오스페달레)", arch: "Filippo Brunelleschi" },
-          { name: "조토의 종탑", arch: "Giotto" },
-          { name: "산타 크로체 성당 & 파치 채플", arch: "Filippo Brunelleschi" },
-          { name: "미켈란젤로 언덕", arch: "피렌체 석양 파노라마" }
-        ]
-      },
-      {
-        day: "Day 7",
-        city: "VENEZIA",
-        title: "물 위에 떠 있는 도시와 스카르파의 디테일",
-        spots: [
-          { name: "산 마르코 광장 & 대성당", arch: "베네치아 고딕 & 비잔틴" },
-          { name: "리알토 다리 (Ponte di Rialto)", arch: "카날 그란데의 상징" },
-          { name: "퀴리니 스탐팔리아 재단", arch: "Carlo Scarpa (물과 정원)" }
-        ]
-      },
-      {
-        day: "Day 8",
-        city: "VENEZIA · TREVISO",
-        title: "모더니즘 거장의 역작, 브리온 묘원과 운하",
-        spots: [
-          { name: "브리온 묘원 (Tomba Brion)", arch: "Carlo Scarpa 마스터피스" },
-          { name: "푼타 델라 도가나", arch: "Tadao Ando 리노베이션" },
-          { name: "산타 마리아 델라 살루테 성당", arch: "Baldassare Longhena" },
-          { name: "베네치아 대학(IUAV) 정문", arch: "Carlo Scarpa" },
-          { name: "코스티투치오네 다리", arch: "Santiago Calatrava" }
-        ]
-      },
-      {
-        day: "Day 9",
-        city: "VENEZIA",
-        title: "베네치아 골목 산책 & 귀국길",
-        spots: [
-          { name: "베네치아 운하 자율 건축산책", arch: "골목길과 다리 탐방" },
-          { name: "마르코 폴로 공항 출국", arch: "인천행 탑승 (+1일 도착)" }
-        ]
-      }
+        { day: "Day 0", date: "27.01.09", city: "NRT", title: "일본 나리타 공항 출발", spots: [ { name: "나리타 국제공항 출국", arch: "사우디아항공 SV0825 21:30" } ] },
+        { day: "Day 1", date: "27.01.10", city: "ROMA", title: "로마 도착 & 자유여행 시작", spots: [ { name: "로마 피우미치노 공항 도착", arch: "SV0207 13:40 도착" }, { name: "호텔 체크인 & 휴식", arch: "개인 일정" }, { name: "로마 시내 자유 탐방", arch: "스페인 광장, 트레비 분수 등" } ] },
+        { day: "Day 2", date: "27.01.11", city: "ROMA", title: "로마 자유여행", spots: [ { name: "로마 시내 자유 건축 탐방", arch: "개인 관심사 기반" }, { name: "건축 캠프 사전 미팅 준비", arch: "개인 일정" } ] },
+        { day: "Day 3", date: "27.01.12", city: "ROMA", title: "건축 캠프 합류 & 오리엔테이션", spots: [ { name: "가이드 미팅 & 호텔 체크인", arch: "건축 캠프 시작" }, { name: "참가자 오리엔테이션", arch: "이수경 가이드" } ] },
+        { day: "Day 4", date: "27.01.13", city: "ROMA", title: "고대 로마와 바로크, 그리고 현대", spots: [ { name: "콜로세움 (Colosseum)", arch: "고대 로마 엔지니어링" }, { name: "산탄드레아 알 퀴리날레 성당", arch: "Lorenzo Bernini" }, { name: "산 카를로 알레 콰트로 폰타네 성당", arch: "Francesco Borromini" }, { name: "파르코 델라 뮤지카 강당", arch: "Renzo Piano" }, { name: "MAXXI 국립 21세기 미술관", arch: "Zaha Hadid" } ] },
+        { day: "Day 5", date: "27.01.14", city: "ROMA · VATICAN", title: "바티칸의 신성과 판테온의 경이", spots: [ { name: "바티칸 대성당 (San Pietro)", arch: "Michelangelo & Maderno" }, { name: "시스티나 경당", arch: "천장화 & 최후의 심판" }, { name: "산타녜세 인 아고네 성당", arch: "Francesco Borromini" }, { name: "산티보 알라 사피엔차 성당", arch: "Francesco Borromini" }, { name: "판테온 (Pantheon)", arch: "고대 로마 돔 구조의 정수" } ] },
+        { day: "Day 6", date: "27.01.15", city: "SIENA", title: "붉은 벽돌과 캄포 광장의 중세 도시", spots: [ { name: "시에나 두오모 대성당", arch: "고딕 & 로마네스크 줄무늬 대리석" }, { name: "푸블리코 궁전 & 망자의 탑", arch: "14세기 시청사" }, { name: "캄포 광장 (Piazza del Campo)", arch: "도시 민주주의의 심장" }, { name: "폰테 브란다 (Fontebranda)", arch: "중세 지하 분수" }, { name: "살림베니 궁전", arch: "세계 최고 은행 본점" } ] },
+        { day: "Day 7", date: "27.01.16", city: "FIRENZE · CHIANTI", title: "대지 속에 묻힌 와이너리와 르네상스의 서막", spots: [ { name: "안티노리 키안티 와이너리", arch: "Archea Associati (시음회)" }, { name: "산 조반니 바티스타 교회", arch: "Giovanni Michelucci" }, { name: "산타 마리아 노벨라 성당", arch: "Leon Battista Alberti" }, { name: "메디치 예배당", arch: "Michelangelo" }, { name: "베키오 다리 (Ponte Vecchio)", arch: "아르노강의 중세 상가교량" } ] },
+        { day: "Day 8", date: "27.01.17", city: "FIRENZE", title: "브루넬레스키의 붉은 돔과 르네상스", spots: [ { name: "피렌체 대성당 쿠폴라 (두오모)", arch: "Filippo Brunelleschi" }, { name: "피렌체 고아원 (오스페달레)", arch: "Filippo Brunelleschi" }, { name: "산타 크로체 성당 & 파치 채플", arch: "Filippo Brunelleschi" }, { name: "미켈란젤로 언덕", arch: "피렌체 석양 파노라마" } ] },
+        { day: "Day 9", date: "27.01.18", city: "VENEZIA", title: "물 위에 떠 있는 도시와 스카르파의 디테일", spots: [ { name: "산 마르코 광장 & 대성당", arch: "베네치아 고딕 & 비잔틴" }, { name: "리알토 다리 (Ponte di Rialto)", arch: "카날 그란데의 상징" }, { name: "퀴리니 스탐팔리아 재단", arch: "Carlo Scarpa (물과 정원)" } ] },
+        { day: "Day 10", date: "27.01.19", city: "VENEZIA · TREVISO", title: "모더니즘 거장의 역작, 브리온 묘원", spots: [ { name: "브리온 묘원 (Tomba Brion)", arch: "Carlo Scarpa 마스터피스" }, { name: "푼타 델라 도가나", arch: "Tadao Ando 리노베이션" }, { name: "산타 마리아 델라 살루테 성당", arch: "Baldassare Longhena" }, { name: "코스티투치오네 다리", arch: "Santiago Calatrava" } ] },
+        { day: "Day 11", date: "27.01.20", city: "VENEZIA", title: "건축 캠프 종료 & 베네치아 자유여행", spots: [ { name: "베네치아 운하 자율 건축산책", arch: "골목길과 다리 탐방" }, { name: "건축 캠프 공식 일정 종료", arch: "개인 일정 시작" } ] },
+        { day: "Day 12", date: "27.01.21", city: "VENEZIA", title: "베네치아 자유여행", spots: [ { name: "베네치아 비엔날레 건축관(외부)", arch: "개인 탐방" }, { name: "부라노 섬 & 무라노 섬", arch: "자유 선택" }, { name: "여정 정리 및 휴식", arch: "개인 일정" } ] },
+        { day: "Day 13", date: "27.01.22", city: "VCE → FCO", title: "로마 공항으로 이동 & 귀국", spots: [ { name: "베네치아 → 로마 기차 이동", arch: "Frecciarossa 탑승" }, { name: "로마 피우미치노 공항 출발", arch: "사우디아항공 SV0208 15:10" } ] }
     ];
 
-    // Initial Default Journals
-    const initialJournals = [
-      {
-        id: 1,
-        day: "Day 2",
-        spot: "로마, 산 카를로 알레 콰트로 폰타네 성당",
-        title: "보로미니의 굽이치는 물결 벽면 앞에 서서",
-        content: "책이나 도면으로만 보던 산 카를리노의 좁은 입면. 실제로 좁은 교차로에 서서 올려다보는 순간, 오목함과 볼록함이 교차하는 석조 파사드가 살아 숨 쉬는 유기체처럼 다가왔다. 돔 내부의 기하학적 격자 천창으로 쏟아지는 빛은 신비로움을 넘어 경건함을 안겨준다.",
-        date: "2027.01.13"
-      },
-      {
-        id: 2,
-        day: "Day 5",
-        spot: "키안티, 안티노리 와이너리",
-        title: "포도밭 대지 아래로 숨어든 나선형 조각",
-        content: "와이너리 건물이 언덕 위로 솟지 않고 완전히 대지 속으로 파묻혀 있다. 붉은 코르텐강 나선형 계단을 타고 지하 셀러로 내려갈 때 느껴지는 서늘한 온도와 참나무 향기, 거대한 곡면 리브 천장. 건축이 지형과 시간, 기능을 얼마나 우아하게 결합할 수 있는지 체감했다.",
-        date: "2027.01.16"
-      },
-      {
-        id: 3,
-        day: "Day 8",
-        spot: "트레비소 근교, 브리온 묘원 (Tomba Brion)",
-        title: "카를로 스카르파가 콘크리트로 써 내려간 시",
-        content: "수련이 떠 있는 물가, 콘크리트 모서리의 정교한 2단 계단 몰딩, 두 개의 원이 교차하는 연리지 창. 스카르파는 남편과 아내의 사랑과 죽음, 그리고 산 자의 공간을 연결하는 모든 디테일에 감정을 새겨놓았다. 침묵 속에서 바람 소리만이 가득했던 이번 여정 최고의 순간.",
-        date: "2027.01.19"
-      }
-    ];
-
-    // Load Check status
-    function loadChecks() {
-      try {
-        return JSON.parse(localStorage.getItem('gabriella_checks')) || {};
-      } catch (e) {
-        return {};
-      }
-    }
-
-    function toggleCheck(key) {
-      const checks = loadChecks();
-      checks[key] = !checks[key];
-      localStorage.setItem('gabriella_checks', JSON.stringify(checks));
-    }
-
-    // Render Timeline
+    const initialJournals = [ { id: 1, day: "Day 4", spot: "로마, 산 카를로 알레 콰트로 폰타네 성당", title: "보로미니의 굽이치는 물결 벽면 앞에 서서", content: "책이나 도면으로만 보던 산 카를리노의 좁은 입면. 실제로 좁은 교차로에 서서 올려다보는 순간, 오목함과 볼록함이 교차하는 석조 파사드가 살아 숨 쉬는 유기체처럼 다가왔다. 돔 내부의 기하학적 격자 천창으로 쏟아지는 빛은 신비로움을 넘어 경건함을 안겨준다.", date: "2027.01.13" }, { id: 2, day: "Day 7", spot: "키안티, 안티노리 와이너리", title: "포도밭 대지 아래로 숨어든 나선형 조각", content: "와이너리 건물이 언덕 위로 솟지 않고 완전히 대지 속으로 파묻혀 있다. 붉은 코르텐강 나선형 계단을 타고 지하 셀러로 내려갈 때 느껴지는 서늘한 온도와 참나무 향기, 거대한 곡면 리브 천장. 건축이 지형과 시간, 기능을 얼마나 우아하게 결합할 수 있는지 체감했다.", date: "2027.01.16" }, { id: 3, day: "Day 10", spot: "트레비소 근교, 브리온 묘원 (Tomba Brion)", title: "카를로 스카르파가 콘크리트로 써 내려간 시", content: "수련이 떠 있는 물가, 콘크리트 모서리의 정교한 2단 계단 몰딩, 두 개의 원이 교차하는 연리지 창. 스카르파는 남편과 아내의 사랑과 죽음, 그리고 산 자의 공간을 연결하는 모든 디테일에 감정을 새겨놓았다. 침묵 속에서 바람 소리만이 가득했던 이번 여정 최고의 순간.", date: "2027.01.19" } ];
+    function loadChecks() { try { return JSON.parse(localStorage.getItem('gabriella_checks')) || {}; } catch (e) { return {}; } }
+    function toggleCheck(key) { const checks = loadChecks(); checks[key] = !checks[key]; localStorage.setItem('gabriella_checks', JSON.stringify(checks)); }
     function renderTimeline() {
-      const checks = loadChecks();
-      const currentStatus = getLiveStatus();
-      const container = document.getElementById('timelineList');
-      container.innerHTML = '';
-
-      itineraryData.forEach((dayData) => {
-        const isCurrent = currentStatus.day === dayData.day;
-        const card = document.createElement('div');
-        card.className = `day-card ${isCurrent ? 'active-day' : ''}`;
-
-        let spotsHtml = '';
-        dayData.spots.forEach((spot, idx) => {
-          const checkKey = `${dayData.day}_spot_${idx}`;
-          const isChecked = !!checks[checkKey];
-          spotsHtml += `
-            <li class="spot-item">
-              <input type="checkbox" id="${checkKey}" ${isChecked ? 'checked' : ''} onchange="toggleCheck('${checkKey}')">
-              <label for="${checkKey}">
-                <strong>${spot.name}</strong>
-                ${spot.arch ? `<span class="spot-arch">(${spot.arch})</span>` : ''}
-              </label>
-            </li>
-          `;
+        const checks = loadChecks();
+        const currentStatus = getLiveStatus();
+        const container = document.getElementById('timelineList');
+        container.innerHTML = '';
+        itineraryData.forEach((dayData) => {
+            const isCurrent = currentStatus.day === dayData.day;
+            const card = document.createElement('div');
+            card.className = `day-card ${isCurrent ? 'active-day' : ''}`;
+            let spotsHtml = '';
+            dayData.spots.forEach((spot, idx) => {
+                const checkKey = `${dayData.day}_spot_${idx}`;
+                const isChecked = !!checks[checkKey];
+                spotsHtml += `<li class="spot-item"><input type="checkbox" id="${checkKey}" ${isChecked ? 'checked' : ''} onchange="toggleCheck('${checkKey}')"><label for="${checkKey}"><strong>${spot.name}</strong> ${spot.arch ? `<span class="spot-arch">(${spot.arch})</span>` : ''}</label></li>`;
+            });
+            card.innerHTML = `<div class="day-badge">${dayData.day.replace('Day ', 'D')}</div><div class="day-head"><div><span class="day-city">${dayData.city} <small>(${dayData.date})</small></span><h3 class="day-title">${dayData.day}: ${dayData.title}</h3></div> ${isCurrent ? '<span style="background:var(--terracotta); color:#fff; font-size:0.75rem; padding:0.2rem 0.6rem; border-radius:20px; font-weight:600;"><i class="fa-solid fa-location-dot"></i> 현재 여정</span>' : ''}</div><ul class="spots-list">${spotsHtml}</ul>`;
+            container.appendChild(card);
         });
-
-        card.innerHTML = `
-          <div class="day-badge">${dayData.day.replace('Day ', 'D')}</div>
-          <div class="day-head">
-            <div>
-              <span class="day-city">${dayData.city}</span>
-              <h3 class="day-title">${dayData.day}: ${dayData.title}</h3>
-            </div>
-            ${isCurrent ? '<span style="background:var(--terracotta); color:#fff; font-size:0.75rem; padding:0.2rem 0.6rem; border-radius:20px; font-weight:600;"><i class="fa-solid fa-location-dot"></i> 현재 여정</span>' : ''}
-          </div>
-          <ul class="spots-list">
-            ${spotsHtml}
-          </ul>
-        `;
-        container.appendChild(card);
-      });
     }
-
-    // Live Status & Countdown
-    function getLiveStatus() {
-      const saved = localStorage.getItem('gabriella_status');
-      if (saved) {
-        try { return JSON.parse(saved); } catch (e) {}
-      }
-      return {
-        day: "D-Day",
-        spot: "출발 준비 중",
-        note: "이탈리아 건축 답사를 위해 스케치북과 카메라를 준비하고 있습니다."
-      };
-    }
-
+    function getLiveStatus() { const saved = localStorage.getItem('gabriella_status'); if (saved) { try { return JSON.parse(saved); } catch (e) {} } return { day: "D-Day", spot: "출발 준비 중", note: "이탈리아 건축 답사를 위해 스케치북과 카메라를 준비하고 있습니다." }; }
     function updateLiveStatusUI() {
-      const status = getLiveStatus();
-      const titleEl = document.getElementById('liveStatusTitle');
-      const descEl = document.getElementById('liveStatusDesc');
-
-      if (status.day === "D-Day") {
-        titleEl.textContent = `현재 여정: 출발 대기 중 ('27년 1월 12일 시작)`;
-      } else if (status.day === "Complete") {
-        titleEl.textContent = `여정 완료: 이탈리아 건축답사를 성공적으로 마쳤습니다!`;
-      } else {
-        titleEl.textContent = `현재 가브리엘라는 [${status.day} ${status.spot || ''}]에 있습니다!`;
-      }
-      descEl.textContent = status.note || "현장에서 건축물의 빛과 비례를 감각하며 새로운 기록을 남기는 중입니다.";
-      renderTimeline();
+        const status = getLiveStatus();
+        const titleEl = document.getElementById('liveStatusTitle');
+        const descEl = document.getElementById('liveStatusDesc');
+        if (status.day === "D-Day") { titleEl.textContent = `현재 여정: 출발 대기 중 ('27년 1월 9일 출발)`; }
+        else if (status.day === "Complete") { titleEl.textContent = `여정 완료: 이탈리아 건축답사를 성공적으로 마쳤습니다!`; }
+        else { titleEl.textContent = `현재 가브리엘라는 [${status.day} ${status.spot || ''}]에 있습니다!`; }
+        descEl.textContent = status.note || "현장에서 건축물의 빛과 비례를 감각하며 새로운 기록을 남기는 중입니다.";
+        renderTimeline();
     }
-
     function openStatusModal() {
-      const status = getLiveStatus();
-      document.getElementById('currentDaySelect').value = status.day;
-      document.getElementById('currentSpotInput').value = status.spot || '';
-      document.getElementById('currentNoteInput').value = status.note || '';
-      document.getElementById('statusModal').style.display = 'flex';
+        const status = getLiveStatus();
+        const select = document.getElementById('currentDaySelect');
+        select.value = status.day;
+        document.getElementById('currentSpotInput').value = status.spot || '';
+        document.getElementById('currentNoteInput').value = status.note || '';
+        document.getElementById('statusModal').style.display = 'flex';
     }
-
     function saveStatusUpdate() {
-      const day = document.getElementById('currentDaySelect').value;
-      const spot = document.getElementById('currentSpotInput').value;
-      const note = document.getElementById('currentNoteInput').value;
-      const status = { day, spot, note, updatedAt: new Date().toISOString() };
-      localStorage.setItem('gabriella_status', JSON.stringify(status));
-      closeModal('statusModal');
-      updateLiveStatusUI();
+        const day = document.getElementById('currentDaySelect').value;
+        const spot = document.getElementById('currentSpotInput').value;
+        const note = document.getElementById('currentNoteInput').value;
+        const status = { day, spot, note, updatedAt: new Date().toISOString() };
+        localStorage.setItem('gabriella_status', JSON.stringify(status));
+        closeModal('statusModal');
+        updateLiveStatusUI();
     }
-
-    // Countdown Timer to 2027-01-12
     function startCountdown() {
-      const targetDate = new Date('2027-01-12T09:00:00+09:00').getTime();
-      const timerEl = document.getElementById('countdownTimer');
-
-      function tick() {
-        const now = new Date().getTime();
-        const diff = targetDate - now;
-
-        if (diff <= 0) {
-          timerEl.textContent = "여정 진행 중!";
-          return;
+        const targetDate = new Date('2027-01-09T09:00:00+09:00').getTime();
+        const timerEl = document.getElementById('countdownTimer');
+        function tick() {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+            if (diff <= 0) { timerEl.textContent = "여정 진행 중!"; return; }
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+            timerEl.innerHTML = `${days}일 ${String(hours).padStart(2,'0')}:${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
         }
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const secs = Math.floor((diff % (1000 * 60)) / 1000);
-
-        timerEl.textContent = `${days}일 ${String(hours).padStart(2,'0')}:${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
-      }
-      tick();
-      setInterval(tick, 1000);
+        tick(); setInterval(tick, 1000);
     }
-
-    // Journals handling
-    function loadJournals() {
-      try {
-        const saved = localStorage.getItem('gabriella_journals');
-        if (saved) return JSON.parse(saved);
-      } catch (e) {}
-      return initialJournals;
-    }
-
+    function loadJournals() { try { const saved = localStorage.getItem('gabriella_journals'); if (saved) return JSON.parse(saved); } catch (e) {} return initialJournals; }
     function renderJournals() {
-      const list = loadJournals();
-      const container = document.getElementById('journalListContainer');
-      container.innerHTML = '';
-
-      if (list.length === 0) {
-        container.innerHTML = '<p style="color:var(--muted); text-align:center; grid-column: 1/-1;">아직 등록된 기록이 없습니다. 새 단상을 기록해 보세요!</p>';
-        return;
-      }
-
-      list.forEach((item, index) => {
-        const card = document.createElement('div');
-        card.className = 'journal-card';
-        card.innerHTML = `
-          <button class="j-del" onclick="deleteJournal(${item.id})" title="삭제"><i class="fa-regular fa-trash-can"></i></button>
-          <span class="j-date">${item.date || ''} · ${item.day || ''}</span>
-          <h4 class="j-title">${item.title}</h4>
-          ${item.spot ? `<span class="j-spot"><i class="fa-solid fa-location-dot"></i> ${item.spot}</span>` : ''}
-          <p class="j-content">${item.content}</p>
-        `;
-        container.appendChild(card);
-      });
+        const list = loadJournals();
+        const container = document.getElementById('journalListContainer');
+        container.innerHTML = '';
+        if (list.length === 0) { container.innerHTML = '<p style="color:var(--muted); text-align:center; grid-column: 1/-1;">아직 등록된 기록이 없습니다. 새 단상을 기록해 보세요!</p>'; return; }
+        list.forEach((item) => {
+            const card = document.createElement('div');
+            card.className = 'journal-card';
+            card.innerHTML = `<button class="j-del" onclick="deleteJournal(${item.id})" title="삭제"><i class="fa-regular fa-trash-can"></i></button><span class="j-date">${item.date || ''} · ${item.day || ''}</span><h4 class="j-title">${item.title}</h4>${item.spot ? `<span class="j-spot"><i class="fa-solid fa-location-dot"></i> ${item.spot}</span>` : ''}<p class="j-content">${item.content}</p>`;
+            container.appendChild(card);
+        });
     }
-
-    function openJournalModal() {
-      document.getElementById('jDayInput').value = getLiveStatus().day !== 'D-Day' ? getLiveStatus().day : 'Day 1';
-      document.getElementById('jSpotInput').value = getLiveStatus().spot || '';
-      document.getElementById('jTitleInput').value = '';
-      document.getElementById('jContentInput').value = '';
-      document.getElementById('journalModal').style.display = 'flex';
-    }
-
+    function openJournalModal() { document.getElementById('jDayInput').value = getLiveStatus().day !== 'D-Day' ? getLiveStatus().day : 'Day 1'; document.getElementById('jSpotInput').value = getLiveStatus().spot || ''; document.getElementById('jTitleInput').value = ''; document.getElementById('jContentInput').value = ''; document.getElementById('journalModal').style.display = 'flex'; }
     function saveJournalEntry() {
-      const day = document.getElementById('jDayInput').value;
-      const spot = document.getElementById('jSpotInput').value;
-      const title = document.getElementById('jTitleInput').value.trim();
-      const content = document.getElementById('jContentInput').value.trim();
-
-      if (!title || !content) {
-        alert("제목과 내용을 입력해 주세요.");
-        return;
-      }
-
-      const journals = loadJournals();
-      const newEntry = {
-        id: Date.now(),
-        day,
-        spot,
-        title,
-        content,
-        date: new Date().toLocaleDateString('ko-KR')
-      };
-
-      journals.unshift(newEntry);
-      localStorage.setItem('gabriella_journals', JSON.stringify(journals));
-      closeModal('journalModal');
-      renderJournals();
+        const day = document.getElementById('jDayInput').value;
+        const spot = document.getElementById('jSpotInput').value;
+        const title = document.getElementById('jTitleInput').value.trim();
+        const content = document.getElementById('jContentInput').value.trim();
+        if (!title || !content) { alert("제목과 내용을 입력해 주세요."); return; }
+        const journals = loadJournals();
+        const newEntry = { id: Date.now(), day, spot, title, content, date: new Date().toLocaleDateString('ko-KR') };
+        journals.unshift(newEntry);
+        localStorage.setItem('gabriella_journals', JSON.stringify(journals));
+        closeModal('journalModal');
+        renderJournals();
     }
-
-    function deleteJournal(id) {
-      if (!confirm("이 기록을 삭제하시겠습니까?")) return;
-      let journals = loadJournals();
-      journals = journals.filter(j => j.id !== id);
-      localStorage.setItem('gabriella_journals', JSON.stringify(journals));
-      renderJournals();
-    }
-
+    function deleteJournal(id) { if (!confirm("이 기록을 삭제하시겠습니까?")) return; let journals = loadJournals(); journals = journals.filter(j => j.id !== id); localStorage.setItem('gabriella_journals', JSON.stringify(journals)); renderJournals(); }
     function exportJournals() {
-      const data = {
-        status: getLiveStatus(),
-        journals: loadJournals(),
-        checks: loadChecks()
-      };
-      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `Gabriella_Italy_Journal_Backup_${new Date().toISOString().slice(0,10)}.json`;
-      a.click();
+        const data = { status: getLiveStatus(), journals: loadJournals(), checks: loadChecks() };
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `Gabriella_Italy_Journal_Backup_${new Date().toISOString().slice(0,10)}.json`;
+        a.click();
+    }
+    function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+    function openLightbox(src, caption) { document.getElementById('lightboxImg').src = src; document.getElementById('lightboxCaption').textContent = caption || ''; document.getElementById('lightboxModal').style.display = 'flex'; }
+    
+    function populateStatusSelect() {
+        const select = document.getElementById('currentDaySelect');
+        select.innerHTML = ''; 
+        const options = [
+            { value: "D-Day", text: "출발 대기 중" },
+            ...itineraryData.map(d => ({ value: d.day, text: `${d.day}: ${d.title}` })),
+            { value: "Complete", text: "답사 완료" }
+        ];
+        options.forEach(opt => {
+            const optionEl = document.createElement('option');
+            optionEl.value = opt.value;
+            optionEl.textContent = opt.text;
+            select.appendChild(optionEl);
+        });
     }
 
-    // Modal & Lightbox Helpers
-    function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
-    }
-
-    function openLightbox(src, caption) {
-      document.getElementById('lightboxImg').src = src;
-      document.getElementById('lightboxCaption').textContent = caption || '';
-      document.getElementById('lightboxModal').style.display = 'flex';
-    }
-
-    // Init
     window.addEventListener('DOMContentLoaded', () => {
+      populateStatusSelect();
       renderTimeline();
       updateLiveStatusUI();
       startCountdown();
       renderJournals();
     });
-  </script>
+</script>
+
 </body>
 </html>
